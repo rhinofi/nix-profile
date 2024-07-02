@@ -1,19 +1,19 @@
 {
-  description = "Basic usage of flakey-profile";
+  description = "flakey-profile with system level deps needed by all devs at rhino.fi";
 
   inputs = {
     flakey-profile.url = "github:lf-/flakey-profile";
-    nixpkgs.url = "github:nixos/nixpkgs?rev=ff0dbd94265ac470dda06a657d5fe49de93b4599";
+    nixpkgs.url = "github:nixos/nixpkgs?rev=b9014df496d5b68bf7c0145d0e9b0f529ce4f2a8";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils, flakey-profile }:
+  outputs = { nixpkgs, flake-utils, flakey-profile }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
         };
-        nix = pkgs.nixVersions.nix_2_21;
+        nix = pkgs.nixVersions.nix_2_23;
       in
       {
         # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
