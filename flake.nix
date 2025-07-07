@@ -3,7 +3,7 @@
 
   inputs = {
     flakey-profile.url = "github:lf-/flakey-profile";
-    nixpkgs.url = "github:nixos/nixpkgs?rev=95ea544c84ebed84a31896b0ecea2570e5e0e236";
+    nixpkgs.url = "github:nixos/nixpkgs?rev=3016b4b15d13f3089db8a41ef937b13a9e33a8df";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -20,7 +20,7 @@
         pkgs = import nixpkgs {
           inherit system;
         };
-        nix = pkgs.nixVersions.nix_2_25;
+        nix = pkgs.nixVersions.nix_2_29;
       in
       {
         # Any extra arguments to mkProfile are forwarded directly to pkgs.buildEnv.
