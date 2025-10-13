@@ -44,6 +44,7 @@
           };
           paths = with pkgs; [
             nix
+            cacert
             direnv
             (nix-direnv.override { inherit nix; })
           ];
