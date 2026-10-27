@@ -3,7 +3,7 @@
 
   inputs = {
     flakey-profile.url = "github:lf-/flakey-profile";
-    nixpkgs.url = "github:nixos/nixpkgs?rev=0d59e0290eefe0f12512043842d7096c4070f30e";
+    nixpkgs.url = "github:nixos/nixpkgs?rev=674a2028661e550a97400c1cc992b9cca9a668a1";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
